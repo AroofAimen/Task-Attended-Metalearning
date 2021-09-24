@@ -26,32 +26,6 @@ class TaskAttention(nn.Module):
         model.add_module("softmax",nn.Softmax(dim=-1))
         return model
 
-    # def build_model_conv(self):
-    #     model = nn.Sequential()
-    #     model.add_module("1x1_conv",nn.Conv1d(self.input_dim,1,1))
-    #     model.add_module('conv1', nn.Conv2d(in_channels=1,  out_channels=1,kernel_size=3, stride=1, padding=1)
-    #     model.add_module('norm1', nn.BatchNorm2d(n_filters, bn_eps, bn_momentum)),
-    #     model.add_module('relu1', nn.ReLU(inplace=False)),
-    #     model.add_module('pool1', nn.MaxPool2d(2)),
-
-    #     cnn2d_2 = nn.Conv2d(in_channels=3, out_channels=1, kernel_size=3, stride=2)
-
-    #        self.cnn_layers = Sequential(
-    #         # Defining a 2D convolution layer
-    #         Conv2d(1, 4, kernel_size=3, stride=1, padding=1),
-    #         BatchNorm2d(4),
-    #         ReLU(inplace=True),
-    #         MaxPool2d(kernel_size=2, stride=2),
-    #         # Defining another 2D convolution layer
-    #         Conv2d(4, 4, kernel_size=3, stride=1, padding=1),
-    #         BatchNorm2d(4),
-    #         ReLU(inplace=True),
-    #         MaxPool2d(kernel_size=2, stride=2),
-    #     )
-
-    #     self.linear_layers = Sequential(
-    #         Linear(4 * 7 * 7, 10)
-    #     )
 
 
     def forward(self, x):
