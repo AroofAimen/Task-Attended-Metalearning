@@ -76,26 +76,7 @@ class Trainer():
                         "attention-input":{"train":[]},
                         "attention-output":{"train":[]}
                         }
-   
-    #    self.history      = {"iterations":{"train":[],"val":[],"test":[]},
-    #                     "loss":{"train":[],"val":[],"test":[]},
-    #                     "accuracy":{"train":[],"val":[],"test":[]},
-    #                     "loss-std":{"train":[],"val":[],"test":[]},
-    #                     "accuracy-std":{"train":[],"val":[],"test":[]},
-    #                     "l_ratio":{"train":[],"val":[],"test":[]},
-    #                     "l_ratio-std":{"train":[],"val":[],"test":[]},
-    #                     "acc_ratio":{"train":[],"val":[],"test":[]},
-    #                     "acc_ratio-std":{"train":[],"val":[],"test":[]},
-    #                     "entropy":{"train":[]},
-    #                     "attention":{"train":[]},
-    #                     "attention-min":{"train":[]},
-    #                     "attention-max":{"train":[]},
-    #                     "attention-std":{"train":[]},
-    #                     "attention-vector":{"train":[]},
-    #                     "task-losses":{"train":[]},
-    #                     "task-gradients":{"train":[]},
-    #                     "batch-csd":{"train":[]}
-    #                     }
+
 
         self.attention_network= None
         if(args.task_attention):
