@@ -40,21 +40,10 @@ def parse_arguments():
     
 
     
-    if("vikrant" in host_name):
-        #change PC_S according to mounted
-        ##EXP_DIR  = "/home/sahil/PC_S/scratch/TaskAttention/exp/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention)
-        # EXP_DIR  = "/home/sahil/Paramshivay/scratch/TaskAttention/exp/vikrant/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention)
-        
-        ##DATA_DIR = "/home/sahil/paramshivay/scratch/data/{}/".format(config.dataset)
-        EXP_DIR  = "./../exp/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention)
-        DATA_DIR = "~/data/{}/".format(config.dataset)
-    elif("aroof" in host_name):
-        EXP_DIR  = "/home/aroof/Ablation-studies/exp/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}/ablation_case-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention,config.ablation_case)
-        # DATA_DIR = "/home/aroof/paramshivay/scratch/data/{}/".format(config.dataset)
-        DATA_DIR = "~/data/{}/".format(config.dataset)
-    else:
-        EXP_DIR  = "/scratch/cknarayanan.iitrpr/TaskAttention/exp/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention)
-        DATA_DIR = "/scratch/cknarayanan.iitrpr/data/{}/".format(config.dataset)
+
+    EXP_DIR  = "./../exp/{}/{}/{}_F/{}WAY_{}SHOT/{}/Attention-{}".format(config.user,config.dataset,config.n_filters,config.n_class,config.n_shot,config.algo,config.task_attention)
+    DATA_DIR = "~/data/{}/".format(config.dataset)
+
     
     LOG_DIR  = os.path.join(EXP_DIR,'logs')
     CKPT_DIR = os.path.join(EXP_DIR,'ckpt')
