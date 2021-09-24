@@ -19,9 +19,6 @@ def run(config,checkpoint_dir=None,args = None):
     args.meta_lr          = config["meta_lr"]
     args.base_lr          = config["base_lr"] if "base_lr" in config else args.base_lr
     args.attention_lr     = config["attention_lr"] if "attention_lr" in config else args.attention_lr
-    # args.meta_batch_size  = int(config["meta_batch_size"])
-    # args.adaptation_steps = int(config["adaptation_steps"])
-    # args.attention_nlayer = int(config["attention_nlayer"])
     args.EXP_DIR          = config["exp_dir"]
     args.LOG_DIR          = os.path.join(args.EXP_DIR,'logs')
     args.CKPT_DIR         = os.path.join(args.EXP_DIR,'ckpt')
@@ -36,9 +33,6 @@ def main(num_samples=10, max_num_epochs=10, gpus_per_trial=2,args=None,MODEL=Non
     config = {
         # "adaptation_steps" : tune.sample_from(lambda _: 2 ** np.random.randint(1, 4)),
         "meta_lr"          : tune.loguniform(1e-4, 1e-2),
-        # "attention_lr"     : tune.loguniform(1e-4, 1e-2),
-        # "meta_batch_size"  : tune.choice([4,8,16,32]),
-        # "attention_nlayer" : tune.choice([1,2,4]),
         "exp_dir"       : "./"
     }
     scheduler = ASHAScheduler(
